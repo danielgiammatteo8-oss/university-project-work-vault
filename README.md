@@ -1,6 +1,6 @@
 # university-project-work-vault
-How to start simulation of this project
-Int the terminal write:
+How to start simulation of this project,
+in the terminal write:
 
 python setup_azienda.py
 
