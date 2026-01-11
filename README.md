@@ -1,2 +1,11 @@
 # university-project-work-vault
-In this repository I want to share my project works and the skills I learned at university
+How to start simulation of this project
+Int the terminal write:
+
+python setup_azienda.py
+
+python database.py
+
+python main_simulation.py
+
+python report_analytics.py
