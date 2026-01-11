@@ -20,7 +20,7 @@ class ControlloQualita:
         Riceve gli oggetti del DB (farmaco e operatore) e i dati dei sensori.
         Esegue il controllo e salva il Lotto.
         """
-        # 1. LOGICA DI CONTROLLO (Usa i limiti salvati nel database per quel farmaco)
+        # LOGICA DI CONTROLLO (Usa i limiti salvati nel database per quel farmaco)
         esito = "CONFORME"
         if temp > farmaco_obj.temp_max or umidita > farmaco_obj.umidita_max:
             esito = "SCARTO"
@@ -29,7 +29,7 @@ class ControlloQualita:
         else:
             logging.info(f"Lotto {codice} approvato da {operatore_obj.cognome}.")
 
-        # 2. SALVATAGGIO NEL DATABASE (Sfruttando le Foreign Keys)
+        # SALVATAGGIO NEL DATABASE (Sfruttando le Foreign Keys)
         nuovo_lotto = Lotto(
             codice_lotto=codice,
             temperatura_rilevata=temp,

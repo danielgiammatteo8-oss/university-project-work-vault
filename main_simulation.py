@@ -30,7 +30,7 @@ def avvia_produzione():
             codice = f"BATCH-2025-{count:03d}"
             
             # Simulazione sensori
-            temp = round(random.gauss(22.0, 2.0), 2) # Temperatura tra 22.0 e 27.0, 22.0 è la media, 2.0 è la deviazione più il valore è piccolo più i dati sono simili, più è grande più sono diversi
+            temp = round(random.gauss(22.0, 2.0), 2) # Spiegazione breve random.gauss: Temperatura 22.0, 22.0 è la media, 2.0 è la deviazione più il valore è piccolo più i dati sono simili, più è grande più sono diversi
             umid = round(random.gauss(45.0, 5.0), 2)
 
             # Eseguiamo il controllo e il salvataggio tramite il Core Logic

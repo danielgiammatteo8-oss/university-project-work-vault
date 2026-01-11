@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 def genera_report_professionale():
     engine = create_engine('sqlite:///azienda_farmaceutica.db')
     
-    # Nota: assicurati che il nome della tabella sia 'produzione' o 'lotti' in base al tuo DB
+    
     query = """
     SELECT 
         l.codice_lotto, 
@@ -33,7 +33,7 @@ def genera_report_professionale():
     workbook  = writer.book
     worksheet = writer.sheets['Dati Produzione']
 
-    # --- FORMATTAZIONE ESISTENTE ---
+    
     format_rosso = workbook.add_format({'bg_color': '#FFC7CE', 'font_color': '#9C0006'})
     format_verde = workbook.add_format({'bg_color': '#C6EFCE', 'font_color': '#006100'})
 
@@ -47,7 +47,7 @@ def genera_report_professionale():
     # --- AGGIUNTA GRAFICI ---
     
     # 1. GRAFICO A TORTA: Riepilogo Esiti (Conforme vs Scarto)
-    # Creiamo un foglio di supporto per i calcoli del grafico (opzionale ma pulito)
+    # Creiamo un foglio di supporto per i calcoli del grafico a torta
     counts = df['esito_controllo'].value_counts()
     summary_sheet = workbook.add_worksheet('Statistiche')
     summary_sheet.write('A1', 'Esito')
